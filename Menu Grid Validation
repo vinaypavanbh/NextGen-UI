@@ -1,0 +1,20 @@
+Feature: Menu Grid Validation
+Scenario: To Validate  collapse  
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	And Click on Grid 
+	When Ablity to Collapase an individual group or sub group one at a time (per click )
+	Then Validate the options selected in Grids (Summary) and Collapse funtionality 
+	And Close Browser 
+
+Scenario: To Validate All collapse  
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	And Click on Grid 
+	When Ablity to Collapase All group or sub group in one click 
+	Then Validate the options selected in Grids (Summary) and Collapse funtionality 
+	And Close Browser 
