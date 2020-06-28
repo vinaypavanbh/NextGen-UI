@@ -1,0 +1,49 @@
+Feature: Summary Pane 
+
+Scenario: To Validate Summary Pane Column
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Account Details 
+	Then Summary Pane should open 
+	And Close Browser 
+	
+Scenario: To Validate  Account Details 
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Account Details 
+	Then Validate "<Account Name>" and "<Account number>"
+	And Close Browser
+	
+Scenario: To Validate Intraday Activity Section  Credits
+
+	Given Open Browser
+	And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Account Details 
+	And user should able to see Total Credits with Proper Currency 
+	And Click on the graph Credit side (green)
+	Then Navigate to transaction tab to drill down to the interday Credit transaction from the last EOD statement in account currency(Acct CCY)
+	
+Scenario: To Validate Intraday Activity Section  debit
+
+	Given Open Browser
+	And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Account Details 
+	And user should able to see Total Debits with Proper Currency
+	And Click on the graph Debit side (red)
+	Then Navigate to transaction tab to drill down to the interday debit transactions from the last EOD statement in account currency(Acct CCY)
+
+	
+Scenario: To Validate Intraday Transactions
+	 
+	Given Open Browser
+	And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Account Details 
+	Then User Should able to click on View all interday Transactions
+	Then Navigate to transaction tab to drill down to the interday Credit and debit transactions from the last EOD statement in account currency(Acct CCY)
+	
+	

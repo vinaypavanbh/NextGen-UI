@@ -1,0 +1,9 @@
+Feature: Reset Columns
+Scenario: To Validate Reset Columns   
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	When User Click on Reset Columns
+	Then validate all columns should got reset and back to orginal positions
+	And Close Browser 

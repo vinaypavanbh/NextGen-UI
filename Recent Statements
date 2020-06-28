@@ -1,0 +1,21 @@
+Feature: Actions in Summary Pane 
+
+
+Scenario: To Validate View ALL Statements
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When User click on View ALL Statements
+	Then Navigate to Tranactions tab to drill down ALL Statements for the account(Statement Date From = T(Current Date) - 390 to Statement Date To=T(Current Date))
+	And Close Browser
+	
+	
+Scenario: To Validate View ALL Transactions
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When User click on View ALL Transactions
+	Then Navigate to Tranactions tab to drill down ALL Transctions for the account(Book Date From = T(Current Date) - 390 to Book Date To=T(Current Date))
+	And Close Browser

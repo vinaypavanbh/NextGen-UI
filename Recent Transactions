@@ -1,0 +1,10 @@
+Feature: Recents Transactions
+
+Scenario: To Validate View ALL Transactions
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When User click on View ALL Transactions
+	Then Navigate to Tranactions tab to drill down ALL Transctions for the account(Book Date From = T(Current Date) - 390 to Book Date To=T(Current Date))
+	And Close Browser

@@ -1,0 +1,40 @@
+Feature: Actions in Summary Pane 
+
+Scenario: To Validate Action Create Instruction
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When Click on Create Instructions
+	Then Validate in Post P1
+	And Close Browser 
+	
+Scenario: To Validate Action Set Account Alert
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When Click on Set Account Alert
+	Then Validate in Post P1
+	And Close Browser 
+	
+Scenario: To Validate Action Explore Historical Balances
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When Click on Explore Historical Balance
+	Then Navigate to the Balance tab to drill down to validate forward(future) value balances for the next 4 days i.e T(current) - 7 days(Inclusive)
+	And Close Browser
+	
+Scenario: To Validate Action Explore Future Balances
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Account Details 
+	When Click on Explore Future Balance
+	Then Navigate to the Balance tab to drill down to validate forward(future) value balances for the next 4 days i.e T(current) + 4 days(Inclusive)
+	And Close Browser 
+	
+
+	

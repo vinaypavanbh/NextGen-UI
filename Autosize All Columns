@@ -1,0 +1,9 @@
+Feature: Autosize All Columns
+Scenario: To Validate Autosize Columns - Autosize All Columns   
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	When User Click on Autosize All Columns 
+	Then All Columns should be get autofit to the grid 
+	And Close Browser 

@@ -1,0 +1,30 @@
+Feature: Pin Columns
+Scenario: To Validate PIN Columns - Pin Left  
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	When User Click on Pin Column
+	Then User Select Pin Left
+	Then Validate Selected Column should pin to Left side 
+	And Close Browser 
+
+Scenario: To Validate PIN Columns - Pin Right  
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	When User Click on Pin Column
+	Then User Select Pin Right 
+	Then Validate Selected Column should pin to Right side 
+	And Close Browser 
+	
+Scenario: To Validate PIN Columns - No Pin  
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	And Click on Menu of desired column 
+	When User Click on Pin Column
+	Then User Select No Pin 
+	Then Validate Selected Column should in same position 
+	And Close Browser 
