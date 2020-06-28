@@ -1,0 +1,10 @@
+Feature: Search Any Column Filter 
+
+Scenario: To Validate  Search Any Column
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When User Enter the "<Column Name>" with Minimum 3 Char to initate the filer
+	And Click on Search Button
+	Then Columns should be displayed based on the search critria input
+	And Close the browser

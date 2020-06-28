@@ -1,0 +1,23 @@
+Feature: Domain
+
+Scenario: To Validate  Domain list
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Domain Dropdown
+	Then validate the  Domain list which is displayed in dropdown
+	And Close Browser
+	
+Scenario: To Validate Domain lists in Ascending order 
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Domain Dropdown 
+	Then List of  Domain must be in ascending order
+	And Close Browser
+	
+Scenario: To validate the dowmian section
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Domain Dropdown  
+	And Select the "<Domain>" from the list
+	Then Retrieve the respective entitilement(access to account information,admin,etc..)
+	And Close Browser

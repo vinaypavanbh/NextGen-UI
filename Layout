@@ -1,0 +1,30 @@
+Feature: Layout 
+
+Scenario: To Validate  Layout 
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Layout Dropdown
+	Then User should able to switch between saved layouts from personalized /library or from Default User Preferences
+	And Close the browser
+	
+	
+Scenario: To Validate Save Layout
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Layout Dropdown
+	Then Click on save button 
+	Then User should be able to Save Configuration to a new or Exisiting Layout
+	And Close the browser
+	
+Scenario: To Validate Settings Layout
+    Given Open Browser
+    And Navigate Account information section	
+	And User Nagivate to summary tab
+	When Click on Settings button
+	Then able to delete layout from library or just owned layout 
+	Then Able to configure Column Grid Layout to reapply next time
+	Then User able to Write access Width of column,grouping,fliter,sortation,Selected Columns 
+	Then User able to share the layout 
+	And Close the browser

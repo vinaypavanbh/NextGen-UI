@@ -1,0 +1,29 @@
+Feature: Reference CCY
+
+Scenario: To Validate Default Currecny
+    Given Open Browser
+    And Navigate Account information section	
+    Then Validate Reference CCY is "EUR"
+	And Close Browser
+	
+Scenario: To Validate  Reference CCY in Ascending order 
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Reference CCY Dropdown 
+	Then List of  Reference Currencies must be in ascending order
+	And Close Browser
+	
+Scenario: To Convert all the values based on selected Reference CCY
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Reference CCY Dropdown 
+	And Select the "<Reference CCY>"
+	Then All values should be converted to selected Reference CCY
+	When User Click on Summary Tab
+	Then Validate the Disclaimer banner 
+	Then Validate the Balances Columns which supposed to be coverted 
+    And Close Browser
+	
+
+
+    

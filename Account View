@@ -1,0 +1,63 @@
+Feature: Account View	
+
+Scenario: To Validate  Account View
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Account View Dropdown
+	Then validate the  Account View list which is displayed in dropdown
+	And Close Browser
+	
+Scenario: To Validate Account View in Ascending order 
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Account View Dropdown 
+	Then List of  Account View must be in ascending order
+	And Close Browser
+	
+Scenario: To validate the Account View  section
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Account View Dropdown  
+	And Select the "<View>" from the list
+	Then List of accounts views from which a user can choose a filtered list of accounts to display only.
+	And Close Browser
+	
+	    Examples:
+      |   View 				| 
+      |   Save View  		|
+	  |   Save As New View  |
+	  |   Set as Default  	|
+	  |   Delete View 		|
+	  
+	  
+Scenario: To validate the Account View section
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Account View Dropdown  
+	And Select the "<MY VIEWS>" from the list
+	Then List of accounts views from which a user can choose a filtered list of accounts to display only.
+	And Close Browser
+	
+	    Examples:
+      |   MY VIEWS			 | 
+      |   All Accounts Active|
+	  |   Top 10 Accounts	 |
+	  |   Company Name       |
+	  |   Negative Balances	 |
+	  
+Scenario: To validate the Account View  section
+    Given Open Browser
+    And Navigate Account information section	
+    When User Click on Account View Dropdown  
+	And Select the "<GLOBAL VIEWS>" from the list
+	Then List of accounts views from which a user can choose a filtered list of accounts to display only.
+	And Close Browser
+	
+	    Examples:
+      |   GLOBAL VIEWS		 | 
+      |   Reconciliation View|
+	  |   Liquidity View	 |
+	  |   Transaction View   |
+	
+	  
+     

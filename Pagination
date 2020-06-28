@@ -1,0 +1,75 @@
+Feature: Accounts Pagination
+
+
+  Scenario: To validate accounts
+    Given I have 20 Accounts
+    When I view all Accounts
+    Then I should see "CompanyName 1"
+    And I should see "CompanyName 2"
+    And I should see "CompanyName 3"
+
+  Scenario: To validate Page links
+    Given I have <count> Accounts
+    When I view all Accounts from page <page>
+    Then I should see a link to page <target page>
+
+    Examples:
+      | count | page | target page |
+      |   20   |   1  |       1     |
+  
+
+  Scenario: To validate Page links for current page
+    Given I have <count> Accounts
+    When I view all Accounts from page <page>
+    Then I should see a disabled pagination link to page <page>
+
+    Examples:
+      | count | page |
+      |   20   |  1   |
+    
+
+  Scenario: To validate Next Page links
+    Given I have <count> Accounts
+    When I view all Accounts from page <page>
+    Then I should see a link "Next Page >>"
+    When I click on ">>"
+    Then I should be on page <next page> 
+	# assert against query params maybe?
+    # alternately, to keep page requests down, one could use something like:
+    # Then I should see a link "Next Page" going to ">>"
+
+    Examples:
+      | count | page | next page |
+      |   25   |   1  |      2    |
+     
+	 
+  Scenario: To validate Previous Page links
+    Given I have <count> Accounts
+    When I view all Accounts from page <page>
+    Then I should see a link "Previous Page >>"
+    When I click on "<<"
+    Then I should be on page <Previous page> 
+	# assert against query params maybe?
+    # alternately, to keep page requests down, one could use something like:
+    # Then I should see a link "Previous" going to ">>"
+
+    Examples:
+      | count | page | next page |
+      |   25   |   1  |      2    |
+
+  Scenario: Next Page links on last page
+    Given I have <count> Accounts
+    When I view all Accounts from page <page>
+    Then I should see a disabled pagination link "Next Page"
+
+    Examples:
+      | count | page |
+      |  20   |   1  |
+      |  25   |   3  |
+	  
+	  
+	  #Negative scenario
+  Scenario: No results
+    Given I have 0 Accounts
+    When I view all Accounts
+    Then I should see "No results" on the page

@@ -1,0 +1,8 @@
+Feature: Disclaimer Banner	
+
+Scenario: To Validate  Account View
+    Given Open Browser
+    And Navigate Account information section	
+	When User Nagivate to summary tab
+	Then Disclaimer Banner should be displayed with Selected Reference Currency on todays date with balances
+	And Close the browser
