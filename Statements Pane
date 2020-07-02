@@ -7,4 +7,5 @@ And Click on Statements tab.
 When User click on any account details
 Then Final EOD statement should open in sepearate tab
 Then All values which are in final eod statements tab should match with details in statements account details.
+Then all related account transaction should be shown in transaction grid
 And Close Browser
