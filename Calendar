@@ -1,0 +1,100 @@
+Feature: Date Validation
+
+
+
+Scenario: Verify that on clicking the date field, a calendar widget should open.
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+When User click on From data and to date.
+Then Calendar widget should open. 
+And Close Browser
+
+Scenario: Verify that the default width of the calendar should be displayed as per the specification.
+
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then Bydefault in from date and to date should be todays system date 
+And Close Browser
+
+Scenario: Verify that the calendar widget’s dimensions should be responsive as per the device and screen size.
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then Calendar display widgat should be in correct dimensions
+And Close Browser
+
+Scenario: Verify that the user can select a date in the calendar and after selecting the date the same gets displayed in the date field.
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+When User selected the correct date 
+Then Same selected date should be shown in the dispaly
+And Close Browser
+
+Scenario: Verify that by default the current month’s calendar should be displayed.
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then By default current month calendar should be shown.
+And Close Browser
+
+
+Scenario: Verify that the user can move to previous and next month’s calendar by choosing the left and right icon over the calendar.
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+when User able to click left and right icons over the calendar 
+Then user able to move left and right over the calendar
+And Close Browser
+
+
+Scenario: Verify that the user should not enter a date manually 
+
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then application should not allow to enter the date manually
+And Close Browser
+
+
+Scenario: Verify the date format supported by the calendar e.g. – dd/mm/yy
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+When user should able to see the data in dd/starting 3 letters of month/yy
+Then User should able to see the currect as mentioned above 
+And Close Browser
+
+
+Scenario: Verify that invalid dates are not allowed in the date field 
+
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then User should not allow or should not see the invalid date like (like date value exceeding 31, month value exceeding 12, etc).
+And Close Browser
+
+
+Scenario: Verify the oldest possible date that can be set on the calendar.
+
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then user should able to see the oldest possible date (have to discuss)
+And Close Browser
+
+Scenario: Verify the last possible date that can be set on the calendar.
+
+Given Open Browser 
+And Navigate to Account information tab.
+And Click on Statements tab.
+Then user should able to see the oldest possible date (have to discuss)
+And Close Browser
+
+
+Negative Test Cases for DateField
+Verify the state of the calendar widget on entering special characters, either the special characters should not be allowed and in the case allowed, they should get discarded while setting a date.
+Verify the state of the calendar widget on entering foreign language characters on the editable date field.
+Check the UI of the calendar widget on extremely small and extremely large screen sizes.
